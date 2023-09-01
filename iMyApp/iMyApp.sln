@@ -3,9 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Apresentacao", "1-Apresentacao", "{8FABAABC-2190-4CFD-AE98-7F18B9DCAC9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Aplicacao", "2-Aplicacao", "{629CDFB9-9B6E-419A-8502-CD313AF95212}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{9C5B3F7E-CD4E-4478-AD5E-31E8D465C2C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "Apresentacao\WindowsForms\WindowsForms.csproj", "{4B8FCDE8-B993-40D4-BA09-AD2E6763D002}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B8FCDE8-B993-40D4-BA09-AD2E6763D002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8FCDE8-B993-40D4-BA09-AD2E6763D002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8FCDE8-B993-40D4-BA09-AD2E6763D002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8FCDE8-B993-40D4-BA09-AD2E6763D002}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B8FCDE8-B993-40D4-BA09-AD2E6763D002} = {8FABAABC-2190-4CFD-AE98-7F18B9DCAC9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04F5F66E-EDFF-4766-9D12-F710FFA87DA8}
