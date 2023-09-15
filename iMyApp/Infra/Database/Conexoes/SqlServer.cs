@@ -13,7 +13,7 @@ namespace Database.Conexoes
         {
 
             return @"Server=.\SQLEXPRESS;Database=iMyApp;User ID=sa;Password=sql2022;Trusted_Connection=False; TrustServerCertificate=True;";
-            //return @"Server=.\SQLEXPRESS;Database=iMyApp;User Id=sa;Password=sql2022;";
+            
         }
     }
 }

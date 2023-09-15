@@ -1,6 +1,7 @@
 ﻿using Database.Conexoes;
 using Microsoft.Data.SqlClient;
 using Negocio.Entidades;
+using Negocio.Entidades.Comum;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Database.Repositorios
 {
-    public class CargoRepository
+    public class CargoRepository : EntidadeBase
     {
 
 
@@ -25,7 +26,7 @@ namespace Database.Repositorios
                 ,[CriadoEm]
                 ,[CriadoPor]
                 ,[AlteradoEm]
-                ,[AlterdoPor])
+                ,[AlteradoPor])
                  VALUES
                 (@Nome, 
                  @status,
@@ -59,9 +60,10 @@ namespace Database.Repositorios
         }
         public bool Atualizar(Cargo cargo) 
         {
+
             try
             {
-                var sql = @"";
+                var sql = @"UPTADE Cargo SET Nome = valor WHERE ";
                 using (var connection = new SqlConnection(SqlServer.StrConexao()))
                 {
                     var cmd = new SqlCommand(sql, connection);
@@ -101,11 +103,11 @@ namespace Database.Repositorios
             }
         }   
 
-        public DataTable ObterTodos(int cargoId)
+        public DataTable ObterTodos()
         {
             SqlDataAdapter dataAdapter = null;  
             var dataTable = new DataTable();
-            var sql = @"";                                                       
+            var sql = @"SELECT Id,Nome,Status,AlteradoEm FROM Cargo";                                                       
             try
             {
                
