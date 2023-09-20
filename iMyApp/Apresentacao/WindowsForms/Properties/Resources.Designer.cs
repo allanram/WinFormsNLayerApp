@@ -59,5 +59,15 @@ namespace WindowsForms.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emil_priver__v9q7v7IX6g_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("emil-priver-_v9q7v7IX6g-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

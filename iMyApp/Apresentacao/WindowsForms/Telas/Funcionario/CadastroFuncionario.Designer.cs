@@ -53,6 +53,10 @@
             label12 = new Label();
             txtNascionalidade = new TextBox();
             label13 = new Label();
+            grpSexo = new GroupBox();
+            radioButton2 = new RadioButton();
+            rb = new RadioButton();
+            grpSexo.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -281,12 +285,44 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(212, 155);
+            label13.Location = new Point(210, 146);
             label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
             label13.Size = new Size(40, 17);
             label13.TabIndex = 25;
             label13.Text = "SEXO";
+            // 
+            // grpSexo
+            // 
+            grpSexo.Controls.Add(radioButton2);
+            grpSexo.Controls.Add(rb);
+            grpSexo.Location = new Point(198, 165);
+            grpSexo.Name = "grpSexo";
+            grpSexo.Size = new Size(239, 51);
+            grpSexo.TabIndex = 26;
+            grpSexo.TabStop = false;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(113, 10);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(101, 21);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "radioButton2";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // rb
+            // 
+            rb.AutoSize = true;
+            rb.Location = new Point(6, 10);
+            rb.Name = "rb";
+            rb.Size = new Size(101, 21);
+            rb.TabIndex = 0;
+            rb.TabStop = true;
+            rb.Text = "radioButton1";
+            rb.UseVisualStyleBackColor = true;
             // 
             // CadastroFuncionario
             // 
@@ -294,6 +330,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(606, 368);
+            Controls.Add(grpSexo);
             Controls.Add(label13);
             Controls.Add(txtNascionalidade);
             Controls.Add(label12);
@@ -322,6 +359,8 @@
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "CadastroFuncionario";
             Text = "CadastroFuncionario";
+            grpSexo.ResumeLayout(false);
+            grpSexo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -353,5 +392,8 @@
         private Label label12;
         private TextBox txtNascionalidade;
         private Label label13;
+        private GroupBox grpSexo;
+        private RadioButton radioButton2;
+        private RadioButton rb;
     }
 }

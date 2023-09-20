@@ -12,10 +12,28 @@ using System.Threading.Tasks;
 
 namespace Database.Repositorios
 {
+    /// <summary>
+    /// <c>cargoRepository</c> Executa comandos SQL(CRUD) na tela de [dbo[.[Cargo]
+    /// <example> Exemplo:     
+    ///      var repsitorio =  new CargoRepository()
+    /// </example>
+    /// 
+    /// </summary>
     public class CargoRepository : EntidadeBase
     {
-
-
+       /// <summary>
+       /// Insere um novo registro na tabela Cargo
+       /// <example> Exemplo:
+       /// <code> 
+       ///    var cargoRepository = new CargoRepository();
+       ///    var cargo = new Cargo("Nome","Status");
+       ///    var resultado = cargoRepository(cargo);
+       /// </code>
+       /// </example>
+       /// </summary>
+       /// <param name="cargo"></param>
+       /// <returns>true or false</returns>
+       ///
         public bool Inserir(Cargo cargo)
         {
             try
@@ -63,7 +81,7 @@ namespace Database.Repositorios
 
             try
             {
-                var sql = @"UPTADE Cargo SET Nome = valor WHERE ";
+                var sql = @"UPTADE Cargo SET Nome = valor WHERE Id = @id";
                 using (var connection = new SqlConnection(SqlServer.StrConexao()))
                 {
                     var cmd = new SqlCommand(sql, connection);
@@ -87,7 +105,7 @@ namespace Database.Repositorios
         {
             try
             {
-                var sql = @"";
+                var sql = @"DELETE FROM Cargo WHERE Id = @Id";
                 using (var connection = new SqlConnection(SqlServer.StrConexao()))
                 {
                     var cmd = new SqlCommand(sql, connection);

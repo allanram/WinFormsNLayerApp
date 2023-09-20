@@ -32,7 +32,7 @@ namespace WindowsForms.Telas.Funcionario
             var nascionalidade = txtNascionalidade.Text;
             var telefone = mskTelefone.Text;
             var rg = mskRg.Text;
-            var sexo;
+            var sexo = bool.Parse(grpSexo.Text);
 
 
 
