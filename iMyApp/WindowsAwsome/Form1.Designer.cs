@@ -72,6 +72,7 @@
             ibContato.TextAlign = ContentAlignment.MiddleLeft;
             ibContato.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibContato.UseVisualStyleBackColor = true;
+            ibContato.Click += ibContato_Click;
             // 
             // ibAdministracao
             // 
