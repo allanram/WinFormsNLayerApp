@@ -1,5 +1,6 @@
 ﻿using Database.Repositorios;
 using Negocio.Entidades;
+using Negocio.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace WindowsForms.Telas.Cargos
 {
     public partial class CargoView : Form
     {
+
         public CargoView()
         {
             InitializeComponent();
@@ -30,6 +32,16 @@ namespace WindowsForms.Telas.Cargos
             var nome = txtCargo.Text;
             var status = chkStatus.Checked;
             var novoCargo = new Cargo(nome, status);
+
+            var erros = Validacoes.ValidarDataAnottations(novoCargo);
+
+            foreach( var erro in erros )
+            {
+                MessageBox.Show(erro.ErrorMessage);
+            }
+
+
+
 
             var cargoRepository = new CargoRepository();
 

@@ -6,10 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Validator\**" />
-    <EmbeddedResource Remove="Validator\**" />
-    <None Remove="Validator\**" />
-  </ItemGroup>
-
 </Project>
