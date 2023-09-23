@@ -1,6 +1,48 @@
 ﻿@page "/relatorio"
+@page "/Fech"
+@using Database.Repositorios;
 <h3>Relatorio de Pedidos</h3>
 
+
+
+
+@if (listaProduto == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Codido</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in listaProduto)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 @code {
 
+    ProdutoRepository produtoRepository = new ProdutoRepository();
+    private List<Produto> listaProduto = new List<Produto>
+
+    protected override void OnInitialized()
+    {
+        var relatorioEstoque = produtoRepository.ObterRelatorioEstoque();
+
+        base.OnInitialized();
+    }
 }

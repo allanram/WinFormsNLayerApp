@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Aplicacao\Negocio\Negocio.csproj" />
+    <ProjectReference Include="..\..\Infra\Database\Database.csproj" />
+  </ItemGroup>
+
 </Project>
