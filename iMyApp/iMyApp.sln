@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Negocio", "Aplicacao\Negoci
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Infra\Database\Database.csproj", "{721AB8D5-D476-4A92-9D66-377CD0412BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAwsome", "WindowsAwsome\WindowsAwsome.csproj", "{C3D4A659-6A81-4613-9D94-515FB4FE7FF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsAwsome", "WindowsAwsome\WindowsAwsome.csproj", "{C3D4A659-6A81-4613-9D94-515FB4FE7FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReport", "Apresentacao\WebReport\WebReport.csproj", "{40CA2DFC-EAA6-4178-8A1F-4B61867D0589}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C3D4A659-6A81-4613-9D94-515FB4FE7FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D4A659-6A81-4613-9D94-515FB4FE7FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D4A659-6A81-4613-9D94-515FB4FE7FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CA2DFC-EAA6-4178-8A1F-4B61867D0589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CA2DFC-EAA6-4178-8A1F-4B61867D0589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CA2DFC-EAA6-4178-8A1F-4B61867D0589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CA2DFC-EAA6-4178-8A1F-4B61867D0589}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{ECE61262-606D-4C57-9725-6BA9324D4474} = {629CDFB9-9B6E-419A-8502-CD313AF95212}
 		{721AB8D5-D476-4A92-9D66-377CD0412BDE} = {9C5B3F7E-CD4E-4478-AD5E-31E8D465C2C4}
 		{C3D4A659-6A81-4613-9D94-515FB4FE7FF3} = {8FABAABC-2190-4CFD-AE98-7F18B9DCAC9D}
+		{40CA2DFC-EAA6-4178-8A1F-4B61867D0589} = {8FABAABC-2190-4CFD-AE98-7F18B9DCAC9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04F5F66E-EDFF-4766-9D12-F710FFA87DA8}
