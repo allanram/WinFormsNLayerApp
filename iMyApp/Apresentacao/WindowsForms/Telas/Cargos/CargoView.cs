@@ -1,24 +1,17 @@
-﻿using Database.Repositorios;
+﻿
 using Negocio.Entidades;
+using Negocio.Repositorios;
 using Negocio.Validators;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsForms.Telas.Cargos
 {
     public partial class CargoView : Form
     {
-
-        public CargoView()
+        private readonly ICargoRepository _cargoRepository;
+        public CargoView(ICargoRepository cargoRepository)
         {
             InitializeComponent();
+            _cargoRepository = cargoRepository;
         }
 
         private void btnNovoCargo_Click(object sender, EventArgs e)
@@ -43,9 +36,8 @@ namespace WindowsForms.Telas.Cargos
 
 
 
-            var cargoRepository = new CargoRepository();
 
-            var resultado = cargoRepository.Inserir(novoCargo);
+            var resultado = _cargoRepository.Incluir(novoCargo);
 
             if (resultado)
             {
@@ -59,8 +51,8 @@ namespace WindowsForms.Telas.Cargos
 
         private void CargoView_Load(object sender, EventArgs e)
         {
-            var cargoRepository = new CargoRepository();
-            var dataTable = cargoRepository.ObterTodos();
+            
+            var dataTable = _cargoRepository.OterTodos();
             gvCargos.DataSource = dataTable;
         }
 
