@@ -43,5 +43,5 @@ namespace Database.Repositorios
             return fornecedores;
         }
     }
-    }
+    
 }

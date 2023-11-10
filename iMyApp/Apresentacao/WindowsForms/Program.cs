@@ -1,5 +1,6 @@
 using WindowsForms.Telas.Cargos;
 using WindowsForms.Telas.Funcionario;
+using WindowsForms.Telas.Usuarios;
 
 namespace WindowsForms
 {
@@ -18,7 +19,7 @@ namespace WindowsForms
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 ApplicationConfiguration.Initialize();
-                Application.Run(new MDIPrincipal());
+                Application.Run(new frmUsuarios());
 
             }
             catch (Exception ex)

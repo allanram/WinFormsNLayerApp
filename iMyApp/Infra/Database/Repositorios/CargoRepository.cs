@@ -58,7 +58,7 @@ namespace Database.Repositorios
                     var sql = @"DELETE FROM Cargo WHERE Id = @id";
 
                     var parametros = new DynamicParameters();
-                    parametros.Add("@Id",Id);
+                    //parametros.Add("@Id",Id);
 
                     var linhasAfetadas = connection.Execute(sql, parametros);
 
