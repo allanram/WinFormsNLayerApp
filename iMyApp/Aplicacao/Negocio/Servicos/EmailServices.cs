@@ -1,5 +1,7 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
+using Negocio.Entidades;
+using Negocio.Templates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,13 +49,54 @@ namespace Negocio.Servicos
                 client.Connect(GmailSmtp, GmailPorta, false);
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate("joey", "password");
+                client.Authenticate(UsuarioApp, SenhaApp);
 
                 client.Send(message);
                 client.Disconnect(true);
                 return true;
             }
-        }     
+        }  
+        public bool EmailRecuperarSenha(string email)
+        {
+            // logiga para ir no banco de dados e fazer um select para retornar dados.
+            var usuario = new Usuario
+            {
+                Email = email,
+                Nome = "Ninja",
+                Senha = "123456"
+            };
+
+
+
+            var corpoEmail = EmailTemplates.RecuperarSenha;
+            corpoEmail = corpoEmail.Replace("{{nome}}", usuario.Nome);
+            corpoEmail = corpoEmail.Replace("{{email}}",usuario.Email);
+            corpoEmail = corpoEmail.Replace("{{senha}}", usuario.Senha);
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("", Remetente));
+            message.To.Add(new MailboxAddress("", Destinatario));
+            message.Subject = "iMyApp - Recuperação de Senha";
+
+            message.Body = new TextPart("html")
+            {
+                Text = EmailTemplates.RecuperarSenha
+                
+            };
+
+            using (var client = new SmtpClient())
+            {
+                client.Connect(GmailSmtp, GmailPorta, false);
+
+                // Note: only needed if the SMTP server requires authentication
+                client.Authenticate(UsuarioApp, SenhaApp);
+
+                client.Send(message);
+                client.Disconnect(true);
+                return true;
+            }
+            
+        }
     }
 }      
         

@@ -26,6 +26,7 @@ namespace WindowsForms.Telas.Usuarios
             var mensagem  = txtMensagem.Text;   
                 
             var emailService = new EmailServices(remetente,destinatario,assunto,mensagem);
+            emailService.EmailRecuperarSenha("allan.r.aguiar@aluno.senai.br");
         }
     }
 }
